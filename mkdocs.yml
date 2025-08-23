@@ -31,8 +31,6 @@ theme:
     - navigation.tabs.sticky
 
 markdown_extensions:
-  - toc:
-      permalink: true
   - admonition
   - tables
   - attr_list
