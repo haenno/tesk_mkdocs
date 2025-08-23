@@ -16,7 +16,7 @@ site_dir: ../site
 nav:
   - Start: index.md
   - Anleitung: anleitung.md
-  - README: readme.md
+  - README: README.md
 
 theme:
   name: material
