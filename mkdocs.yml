@@ -4,25 +4,20 @@ site_author: haenno
 # Optional: passe die URL an, sobald Pages konfiguriert ist
 site_url: https://haenno.github.io/tesk_mkdocs/
 
-# Standard Docs-Verzeichnis verwenden
-docs_dir: docs
+# Inhalte liegen nun im Repository-Root
+docs_dir: .
 
 # Verhindert Probleme mit Pfaden auf Project Pages (Nutze .html statt /-Verzeichnisse)
 use_directory_urls: false
 
-# Standard Site-Verzeichnis im Repo-Root
-site_dir: site
+# Baue das Site-Output außerhalb des Docs-Verzeichnisses (da docs_dir='.')
+site_dir: ../site
 
 nav:
   - Start: index.md
   - Anleitung: anleitung.md
+  - README: README.md
 
 theme:
   name: material
   language: de
-
-plugins:
-  - to-pdf:
-      enabled_if_env: ENABLE_PDF_EXPORT
-      output_path: pdf/document.pdf
-      download_link: header

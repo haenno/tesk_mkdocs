@@ -3,13 +3,11 @@ name: Deploy MkDocs to GitHub Pages
 on:
   push:
     branches:
-      - main
-    paths-ignore:
-      - 'docs/pdf/**'
+      - main  # Passe ggf. den Branch-Namen an
   workflow_dispatch: {}
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -40,36 +38,15 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install mkdocs mkdocs-material mkdocs-to-pdf
+          pip install mkdocs mkdocs-material
 
-      - name: Build site + PDF
-        run: ENABLE_PDF_EXPORT=1 mkdocs build --config-file mkdocs.yml
-
-      - name: Commit PDF into repository
-        run: |
-          set -e
-          mkdir -p docs/pdf
-          cp -f site/pdf/document.pdf docs/pdf/document.pdf
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/pdf/document.pdf
-          if git diff --staged --quiet; then
-            echo "No PDF changes to commit."
-          else
-            git commit -m "chore: update PDF (mkdocs-to-pdf) [skip ci]"
-            git push
-          fi
+      - name: Build site
+        run: mkdocs build --config-file mkdocs.yml
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site
-
-      - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: site-pdf
-          path: site/pdf/document.pdf
+          path: ../site
 
   deploy:
     environment:
