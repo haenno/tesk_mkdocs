@@ -21,3 +21,17 @@ nav:
 theme:
   name: material
   language: de
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - tables
+  - attr_list
