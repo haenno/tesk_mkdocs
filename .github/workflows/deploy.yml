@@ -10,9 +10,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      pages: write
-      id-token: write
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -38,10 +36,11 @@ jobs:
       - name: Build site
         run: mkdocs build --config-file mkdocs.yml --site-dir site
 
-      - name: Deploy to GitHub Pages (org)
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
-          # Optional: Setze die Ziel-Branch, z.B. 'gh-pages'
-          # publish_branch: gh-pages
+          publish_branch: gh-pages
+          # Für den ersten Deploy empfiehlt sich ein Orphan-Branch ohne Historie
+          force_orphan: true
