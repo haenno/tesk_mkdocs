@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="960" viewBox="0 0 540 960">
+  <rect width="540" height="960" rx="48" fill="#0f172a"/>
+  <rect x="30" y="40" width="480" height="880" rx="36" fill="#111827" stroke="#1f2937"/>
+  <circle cx="270" cy="70" r="6" fill="#1f2937"/>
+  <rect x="80" y="120" width="380" height="40" rx="12" fill="#0b1220" stroke="#1f2937"/>
+  <rect x="80" y="180" width="380" height="180" rx="16" fill="#0b1220" stroke="#1f2937"/>
+  <rect x="80" y="380" width="180" height="120" rx="12" fill="#0b1220" stroke="#1f2937"/>
+  <rect x="280" y="380" width="180" height="120" rx="12" fill="#0b1220" stroke="#1f2937"/>
+  <rect x="80" y="520" width="380" height="220" rx="16" fill="#0b1220" stroke="#1f2937"/>
+  <rect x="140" y="770" width="260" height="60" rx="16" fill="#22d3ee"/>
+  <text x="270" y="812" text-anchor="middle" font-family="Segoe UI, Roboto, Arial" font-size="20" fill="#07252b" font-weight="700">Weiter</text>
+</svg>
