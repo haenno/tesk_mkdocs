@@ -25,3 +25,4 @@ plugins:
   - to-pdf:
       enabled_if_env: ENABLE_PDF_EXPORT
       output_path: pdf/document.pdf
+  download_link: header

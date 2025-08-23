@@ -4,10 +4,12 @@ on:
   push:
     branches:
       - main  # Passe ggf. den Branch-Namen an
+    paths-ignore:
+      - 'docs/pdf/**'
   workflow_dispatch: {}
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -42,6 +44,21 @@ jobs:
 
       - name: Build site + PDF
         run: ENABLE_PDF_EXPORT=1 mkdocs build --config-file mkdocs.yml
+
+      - name: Commit PDF into repository
+        run: |
+          set -e
+          mkdir -p docs/pdf
+          cp -f site/pdf/document.pdf docs/pdf/document.pdf
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/pdf/document.pdf
+          if git diff --staged --quiet; then
+            echo "No PDF changes to commit."
+          else
+            git commit -m "chore: update PDF (mkdocs-to-pdf) [skip ci]"
+            git push
+          fi
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
