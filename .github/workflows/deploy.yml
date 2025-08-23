@@ -3,7 +3,7 @@ name: Deploy MkDocs to GitHub Pages
 on:
   push:
     branches:
-      - main  # Passe ggf. den Branch-Namen an
+      - main
     paths-ignore:
       - 'docs/pdf/**'
   workflow_dispatch: {}
