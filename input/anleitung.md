@@ -15,7 +15,7 @@ Im Folgenden finden Sie zusätzliche Mockup-Inhalte zur Veranschaulichung einer 
 
 Kurze Beschreibung: Ein dunkles Dashboard-Layout mit Kopfzeile, Navigation, KPI-Karten und zwei Diagrammbereichen (Linie und Balken). Ideal, um den groben Aufbau einer Admin-Oberfläche zu skizzieren.
 
-![Mockup Dashboard](../images/mockup-dashboard.svg)
+![Mockup Dashboard](images/mockup-dashboard.svg)
 
 Stichpunkte:
 
@@ -28,7 +28,7 @@ Stichpunkte:
 
 Kurze Beschreibung: Ein simples mobiles Layout mit Header, Hero-Bereich, zwei Cards, Content-Block und Call-to-Action.
 
-![Mockup Mobile](../images/mockup-mobile.svg)
+![Mockup Mobile](images/mockup-mobile.svg)
 
 Stichpunkte:
 
@@ -41,7 +41,7 @@ Stichpunkte:
 
 Kurze Beschreibung: Eine Produkt-Landingpage mit Header, Hero-Sektion (Text + Visual), sowie drei Feature-Kacheln.
 
-![Mockup Landingpage](../images/mockup-landing.svg)
+![Mockup Landingpage](images/mockup-landing.svg)
 
 Stichpunkte:
 
@@ -66,5 +66,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non nibh ut mi 
 
 Ergänzend ein kleines PNG-Placeholder-Bild zur Vollständigkeit:
 
-![Zusatz Mockup](../images/mockup-extra.png)
+![Zusatz Mockup](images/mockup-extra.png)
 

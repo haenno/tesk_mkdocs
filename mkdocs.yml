@@ -1,0 +1,15 @@
+site_name: Tesk MkDocs
+site_description: Demo-Dokumentation mit MkDocs
+site_author: haenno
+# Optional: passe die URL an, sobald Pages konfiguriert ist
+# site_url: https://haenno.github.io/tesk_mkdocs/
+
+# Der Inhalt liegt im Ordner "input"
+docs_dir: input
+
+nav:
+  - Anleitung: anleitung.md
+
+theme:
+  name: material
+  language: de
