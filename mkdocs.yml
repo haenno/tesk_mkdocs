@@ -14,10 +14,9 @@ use_directory_urls: false
 site_dir: ../site
 
 nav:
-  - Start: index.md
+  - Start: README.md
   - Dokumentation:
       - Anleitung: anleitung.md
-      - README: README.md
 
 theme:
   name: material
