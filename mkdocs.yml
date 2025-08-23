@@ -2,12 +2,16 @@ site_name: Tesk MkDocs
 site_description: Demo-Dokumentation mit MkDocs
 site_author: haenno
 # Optional: passe die URL an, sobald Pages konfiguriert ist
-# site_url: https://haenno.github.io/tesk_mkdocs/
+site_url: https://haenno.github.io/tesk_mkdocs/
 
 # Der Inhalt liegt im Ordner "input"
 docs_dir: input
 
+# Verhindert Probleme mit Pfaden auf Project Pages (Nutze .html statt /-Verzeichnisse)
+use_directory_urls: false
+
 nav:
+  - Start: index.md
   - Anleitung: anleitung.md
 
 theme:
