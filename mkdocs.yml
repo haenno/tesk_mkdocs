@@ -14,7 +14,7 @@ use_directory_urls: false
 site_dir: ../site
 
 nav:
-  - Start: README.md
+  - Start: start.md
   - Dokumentation:
       - Anleitung: anleitung.md
 
